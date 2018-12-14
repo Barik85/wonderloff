@@ -1,0 +1,21 @@
+{
+  "name": "interpretator_redesign",
+  "description": "Interpretator Redesign",
+  "main": "index.html",
+  "authors": [
+    "Barik"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "3.*"
+  }
+}

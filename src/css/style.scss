@@ -1,0 +1,306 @@
+// reset css
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+// reset end
+
+$grey: #5e6b73;
+
+@font-face {
+  font-family: 'mullerbold';
+  src: url('../fonts/muller-bold-webfont.woff2') format('woff2'),
+       url('../fonts/muller-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mullerregular';
+  src: url('../fonts/muller-regular-webfont.woff2') format('woff2'),
+       url('../fonts/muller-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mullerlight';
+  src: url('../fonts/muller-light-webfont.woff2') format('woff2'),
+       url('../fonts/muller-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+html {
+  @media (max-width: 1024px) {
+    min-height: 100%;
+    overflow: auto;
+  }
+}
+
+body {
+  font-family: 'mullerlight', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.modal_wrapper {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  min-height: 100%;
+  background: url('../img/main_bg.jpg') center center no-repeat;
+  background-size: cover;
+  font-family: 'mullerregular', Arial, Helvetica, sans-serif;
+  color: $grey;
+
+  @media (max-width: 720px) {
+    height: 120%;
+  }
+}
+
+.big_text {
+  font-size: 30px;
+}
+
+.bold_title {
+  font-family: 'mullerbold', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.modal_content {
+  max-width: 600px;
+  margin: 45px auto;
+  padding: 20px;
+
+  @media (max-width: 340px) {
+    padding: 10px;
+  }
+}
+
+h1,
+h2 {
+  line-height: 40px;
+}
+
+input {
+  background-color: transparent;
+  border: 2px solid $grey;
+  border-radius: 0;
+  padding: 10px;
+  flex: 1;
+  max-width: 500px;
+  font-size: 16px;
+
+  &:focus {
+    outline-width: 0;
+  }
+}
+
+label {
+  display: block;
+  min-width: 80px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.input_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.button {
+  padding: 15px 100px;
+  background-color: #fff;
+  color: $grey;
+  font-family: 'mullerbold', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $grey;
+    color: #fff;
+  }
+
+  @media (max-width: 720px) {
+    padding: 20px 50px;
+  }
+}
+
+.cancel {
+  width: 30px;
+  fill: $grey;
+  transition: transform 200ms;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+
+.cancel_button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  -webkit-appearance: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 10px;
+  background: url('../img/pink_bg.jpg') center center no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.logo {
+  width: 60px;
+  margin-top: 60px;
+}
+
+h1 {
+  font-family: 'mullerlight', Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  line-height: 50px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+
+  @media (max-width: 720px) {
+    font-size: 40px;
+  }
+}
+
+.btn_black {
+  padding: 12px 30px;
+  margin: 40px auto;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.social_links {
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+  margin-bottom: 60px;
+}
+
+.social_link {
+  background: url('../img/icons_sprite.png') no-repeat;
+  background-size: 106px;
+  width: 34px;
+  height: 34px;
+}
+
+.insta {
+  background-position: 0 0;
+}
+
+.fb {
+  background-position: -36px 0;
+}
+
+.mail {
+  background-position: -72px 0;
+}
+
+.heart {
+  width: 42px;
+  margin-top: 20px;
+}
+
+.thanks_message {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.error_message {
+  display: none;
+  color: rgb(250, 2, 2);
+  padding: 10px;
+}
+
+.is_error {
+  .error_message {
+    display: block;
+  }
+}
+
+.is_sent {
+  position: fixed;
+  bottom: 0;
+}
