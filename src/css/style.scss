@@ -107,7 +107,7 @@ body {
   color: $grey;
 
   @media (max-width: 720px) {
-    height: 120%;
+    min-height: 120%;
   }
 }
 
